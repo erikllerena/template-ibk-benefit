@@ -1,0 +1,206 @@
+@import 'src/variables'
+
+.tib-nav-item
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding-right: 30px
+
+.tib-nav-tab
+    display: flex
+    align-items: center
+    line-height: 54px
+    font-size: 13px
+    font-weight: 600
+    color: $color-secondary
+    transition: .25s
+    padding: 0 5px
+    background: 0 0
+    text-decoration: none
+    outline: 0
+    cursor: pointer
+    &:hover, &.active
+        color: $color-primary
+        box-shadow: inset 0 -3px 0 0 $color-primary
+        & svg
+            color: $color-primary
+    & svg    
+        font-size: 12px
+
+.tib-tab-pane
+    position: absolute
+    background-color: #fff
+    width: 80%
+    border-width: 1px 0
+    border-style: solid
+    border-color: #ebecec
+    box-shadow: 0 2px 4px -2px rgba(0,0,0,.15)
+    z-index: 3
+    & .tib-tab-pane-side-left
+        width: 300px
+        background-color: #f7f7f7
+        padding: 30px 10px 30px 42px
+    & .tib-tab-pane-side-right
+        width: 100%
+        padding: 10px
+    & .tib-nav-submenu
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        transition: .25s
+        position: relative
+        cursor: pointer
+        outline: 0
+        border: 0
+        background: inherit
+        font-size: 14px
+        text-align: left
+        &.tib-nav-submenu-last span
+            color: $color-primary
+            font-weight: bolder
+            & svg    
+                font-size: 12px
+                color: $color-primary
+        &:hover, &.active
+            & span
+                color: $color-primary
+                z-index: 1
+            &::before
+                opacity: 1
+        &::before
+            content: ""
+            position: absolute
+            display: block
+            width: 300px
+            right: -10px
+            height: 100%
+            background-color: #efefef
+            transition: .25s
+            opacity: 0
+
+.tib-submenu-detail
+    .tib-submenu-detail-header
+        display: flex
+        flex-shrink: 0
+        align-items: center
+        justify-content: space-between
+        padding: 1rem 1rem
+        border-bottom: 1px solid #dee2e6
+    .tib-submenu-detail-body
+        position: relative
+        flex: 1 1 auto
+        padding: 1rem  
+
+.close 
+    position: absolute
+    top: 0
+    right: 10px
+    font-size: 42px
+    color: white
+    float: right
+    font-size: 28px
+    font-weight: bold
+    transform: rotate(45deg)
+    &:hover,&:focus 
+        color: #000
+        text-decoration: none
+        cursor: pointer
+        display: none
+
+@media screen and (width >= 768px)
+    .close
+        display: none 
+        
+@media screen and (width < 768px) 
+    [class*="tib-sidebar"]
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1060
+        width: 100vw !important
+        height: 100%
+        overflow-x: hidden
+        overflow-y: auto
+        background: #0000005e !important
+        display: none
+        outline: 0
+        & .close
+            display: block                        
+        
+    .tib-sidebar-0
+        &>ul
+            display: flex
+            flex-direction: column
+            pointer-events: auto
+            background-clip: padding-box
+            border-radius: 0.3rem
+            outline: 0
+            align-content: flex-start
+            align-items: flex-start
+            flex-wrap: nowrap
+            margin: 3rem auto
+            & li
+                background: white
+                width: 300px
+                padding: 10px 0     
+                margin: 0 auto 0 auto
+                justify-content: center
+                &:nth-child(1)
+                    border-radius: 10px 10px 0 0
+                    margin-top: auto
+                &:nth-child(4)
+                    border-radius:  0 0 10px 10px
+                    margin-bottom: auto        
+
+    .tib-sidebar-1
+        &> div.tib-tab-pane-side-left
+            flex-direction: column
+            pointer-events: auto
+            background-clip: padding-box
+            border-radius: 0.3rem
+            outline: 0
+            align-content: flex-start
+            align-items: flex-start
+            flex-wrap: nowrap
+            margin: 3rem auto
+            width: 300px !important
+            padding: 0
+            & button
+                background: white
+                width: 100%
+                padding: 10px      
+                margin: 0 auto 0 auto
+                justify-content: center
+                line-height: 54px
+                &:hover, &.active
+                    &::before
+                        opacity: 0
+                &:nth-child(1)
+                    border-radius: 10px 10px 0 0
+                    margin-top: auto
+                &:nth-child(4)
+                    border-radius:  0 0 10px 10px
+                    margin-bottom: auto
+
+    .tib-sidebar-2
+        &> div.tib-tab-pane-side-right
+            flex-direction: column
+            pointer-events: auto
+            background-clip: padding-box
+            border-radius: 0.3rem
+            outline: 0
+            align-content: flex-start
+            align-items: flex-start
+            flex-wrap: nowrap
+            margin: 3rem auto
+            width: 300px !important
+            padding: 0
+            & div.tib-submenu-detail
+                background: white
+                width: 100%
+                padding: 10px      
+                margin: 0 auto 0 auto
+                justify-content: center
+                & div.tib-submenu-detail-body .list-group button:hover
+                    background-color: $color-primary
+                    color: white

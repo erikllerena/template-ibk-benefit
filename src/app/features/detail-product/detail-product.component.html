@@ -1,0 +1,103 @@
+<div class="container mb-4">
+    <div class="tib-detail-card mt-4 mb-4">
+        <!-- card left -->
+        <div class="product-imgs">
+            <div class="tib-detail-img-display">
+                <div class="tib-detail-img-showcase">
+                    <img class="tib-detail-image" [src]="product.url" alt="image">
+                    <img class="tib-detail-image" [src]="product.urlSecond" alt="image">
+                    <img class="tib-detail-image" [src]="product.urlThird" alt="image">
+                    <img class="tib-detail-image" [src]="product.urlQuarter" alt="image">
+                </div>
+            </div>
+            <div class="tib-detail-img-select">
+                <div class="tib-detail-img-item">
+                    <a href="#" data-id="1" (click)="slideImage(1, $event)">
+                        <img class="tib-detail-image" [src]="product.url" alt="image">
+                    </a>
+                </div>
+                <div class="tib-detail-img-item" (click)="slideImage(2, $event)">
+                    <a href="#" data-id="2">
+                        <img class="tib-detail-image" [src]="product.urlSecond" alt="image">
+                    </a>
+                </div>
+                <div class="tib-detail-img-item" (click)="slideImage(3, $event)">
+                    <a href="#" data-id="3">
+                        <img class="tib-detail-image" [src]="product.urlThird" alt="image">
+                    </a>
+                </div>
+                <div class="tib-detail-img-item" (click)="slideImage(4, $event)">
+                    <a href="#" data-id="4">
+                        <img class="tib-detail-image" [src]="product.urlQuarter" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- card right -->
+        <div class="tib-detail-product-content">
+            <h2 class="tib-detail-product-title">{{ product.name }}</h2>
+
+            <div class="tib-detail-product-price">
+                <p class="tib-detail-last-price">Precio antiguo: <span>S/ {{ product.price * 1.25 }}</span></p>
+                <p class="tib-detail-new-price">Precio oferta: <span>S/ {{ product.price }}</span></p>
+            </div>
+
+            <div class="tib-detail-product-detail">
+                <ul class="list-group">
+                    <li class="list-group-item disabled" *ngFor="let esp of product.extraInfo?.split('///')">
+                        <i class="fa-solid fa-caret-right"></i><span class="ms-2">{{ esp }}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tib-detail-purchase-info">
+                <input type="number" class="me-4" min="0" value="1" [(ngModel)]="quantityProduct">
+                <button type="button" class="ms-4" class="btn" (click)="addProduct(product)">
+                    Agregar <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mb-4 mt-4">
+    <h2>Productos relacionados</h2>
+    <div class="row row-cols-2 row-cols-md-6 g-4 mb-2" style="overflow: auto; flex-wrap: nowrap; margin: 20px;" *ngIf="!showCarousel">
+        <div class="col mb-4" *ngFor="let other of otherProducts" (click)="navigateTo(other.uuid)">
+            <div class="card h-100">
+                <img [src]="other.url" class="card-img" alt="...">
+            </div>
+        </div>
+        <div class="col mb-4" *ngFor="let other of otherProducts"  (click)="navigateTo(other.uuid)">
+            <div class="card h-100">
+                <img [src]="other.url" class="card-img" alt="...">
+            </div>
+        </div>
+        <div class="col mb-4" *ngFor="let other of otherProducts" (click)="navigateTo(other.uuid)">
+            <div class="card h-100">
+                <img [src]="other.url" class="card-img" alt="...">
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" *ngIf="showCarousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" *ngFor="let other of otherProducts; let i = index" 
+          [attr.data-bs-slide-to]="i" class="active" aria-current="true" [attr.aria-label]="'Slide' + i"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000" *ngFor="let other of otherProducts; let i = index" (click)="navigateTo(other.uuid)">
+            <img [src]="other.url" class="d-block w-100" [alt]="other.name">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ other.name }}</h5>
+            </div>
+          </div>          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>

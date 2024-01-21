@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid flex-column px-md-4 mx-md-4">
+        <div class="tib-navtop row">
+            <div class="col-3 col-sm-1 toggler-col mt-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pills-tab"
+                    aria-controls="pills-tab" aria-expanded="false" aria-label="Toggle navigation"
+                    (click)="this.openSidebar = !this.openSidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col-5 col-sm-3  mt-2">
+                <a id="logo" routerlink="/" ng-reflect-router-link="/" href="/">
+                    <img alt="Interbank Benefit"
+                        src="https://static.interbankbenefit.pe/public/web/static/scorpio/assets/images/brand/new-logo.svg">
+                </a>
+            </div>
+            <div class="col-4 col-sm-8 col-md-3 cart-col order-md-4 mt-2">
+                <div class="tib-cart-container">
+                    <i class="fa fa-shopping-cart">
+                    </i>
+                    <div class="badge"><span>{{ countCart }}</span></div>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-3 search-col mt-2">
+                <div class="tib-search-container">
+                    <label class="header">
+                        <input type="text" id="filter" (input)="searchByNameBox($event)"
+                            placeholder="Encuentra lo mejor en vales, productos y más">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="card" *ngIf="productsByName.length>0" style="max-height: 100px; overflow: auto;">
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true"
+                                *ngFor="let pro of productsByName" (click)="navigateTo(pro.uuid)">
+                                {{ pro.name + ' - ' + pro.brand }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="width: 100%">
+            <div class="col-sm-12">
+                <app-menu [openSidebar]="this.openSidebar" [concepts]="concepts" [categories]="categories"
+                    [subcategories]="subCategories"></app-menu>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,62 @@
+<div class="tib-sidebar-0 d-md-block" [ngClass]="{'d-block': this.openSidebar, 'd-none': this.openSidebar && this.openSubMenu}">
+    <ul class="nav nav-pills collapse navbar-collapse mb-3 ps-md-4 pe-md--4" id="pills-tab" role="tablist">
+        <li class="tib-nav-item" role="presentation" (click)="selectConcept()" *ngFor="let c of concepts; let i = index" >
+            <a class="tib-nav-tab" [attr.id]="createValueOfAttributes('pills-m-', c.uuid, '-tab')" data-bs-toggle="pill"
+                [attr.data-bs-target]="createValueOfAttributes('#pills-m-', c.uuid, '')" type="button" role="tab"
+                [attr.aria-controls]="createValueOfAttributes('pills-m-', c.uuid, '')" aria-selected="false">
+                {{ c.name }} <i aria-hidden="true" class="fas fa-angle-down ms-2 mt-1 tib-icon"></i>
+            </a>
+        </li>
+        <li class="tib-nav-item" role="presentation">
+            <a class="tib-nav-tab" type="button" role="tab">Viajes</a>
+        </li>
+        <li class="tib-nav-item" role="presentation">
+            <a class="tib-nav-tab" type="button" role="tab">Canje en tiendas</a>
+        </li>
+    </ul>    
+    <div class="close" (click)="closeSideBar()">+</div>
+</div>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane tib-tab-pane fade" *ngFor="let c of concepts; let i = index" [attr.id]="createValueOfAttributes('pills-m-', c.uuid, '')" role="tabpanel"
+        [attr.aria-labelledby]="createValueOfAttributes('pills-m-', c.uuid, '-tab')" #tab (mouseleave)="closeDetail(tab)">
+        <div class="d-flex align-items-start">
+            <div class="tib-sidebar-1 d-md-block" [ngClass]="{'d-block': this.openSidebar && this.openSubMenu, 'd-none': this.openSidebar && this.openSubMenu && this.openSubMenuDetail }">
+                <div class="nav flex-column nav-pills me-md-3 tib-tab-pane-side-left" id="v-submenu-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="tib-nav-submenu p-2" *ngFor="let cat of categories | filter: 'uuidConcept' : c.uuid"
+                            [attr.id]="createValueOfAttributes('v-pills-sm-', cat.uuid, '-tab')" data-bs-toggle="pill"
+                            [attr.data-bs-target]="createValueOfAttributes('#v-pills-sm-', cat.uuid, '')" type="button" role="tab"
+                            [attr.aria-controls]="createValueOfAttributes('v-pills-sm-', cat.uuid, '')" aria-selected="false"
+                            (click)="selectCategory()">
+                            <span>{{ cat.name }}</span></button>
+                    <button class="tib-nav-submenu tib-nav-submenu-last p-2" id="v-pills-settings-tab"
+                        data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false">
+                        <span>Ver todo<i aria-hidden="true"
+                                class="fas fa-angle-right ms-2 mt-1 tib-icon"></i></span></button>
+                </div>
+                <div class="close" (click)="closeSideBar()">+</div>
+            </div>
+            <div class="tib-sidebar-2 d-md-block" [ngClass]="{'d-block': this.openSidebar && this.openSubMenuDetail}">
+                <div class="tab-content tib-tab-pane-side-right" id="v-submenu-tabContent">
+                    <div class="tab-pane fade tib-submenu-detail" *ngFor="let cat of categories | filter: 'uuidConcept' : c.uuid"
+                        [attr.id]="createValueOfAttributes('v-pills-sm-', cat.uuid, '')" 
+                        role="tabpanel" [attr.aria-labelledby]="createValueOfAttributes('v-pills-sm-', cat.uuid, '-tab')">
+                        <div class="tib-submenu-detail-header">{{ cat.name }}</div>
+                        <div class="tib-submenu-detail-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action border-0"
+                                    aria-current="true" *ngFor="let subcat of subcategories | filter: 'uuidCategory' : cat.uuid"
+                                    (click)="selectSubCategory(subcat.uuid)">
+                                    {{ subcat.name }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="close" (click)="closeSideBar()">+</div>
+            </div>
+        </div>
+    </div>
+    
+</div>

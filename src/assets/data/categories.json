@@ -1,0 +1,50 @@
+[
+    {
+        "uuid": "22ee1769-46aa-4c71-80ee-0bff7c17a0a7",
+        "name": "Vales de consumo",
+        "description": "Vales de consumo",
+        "uuidConcept": "7910d18f-f9ad-4a54-9639-d95662efa633"
+    },
+    {
+        "uuid": "11d7e8c5-4186-4493-bddb-2827ee950b8d",
+        "name": "Giftcards",
+        "description": "Giftcards",
+        "uuidConcept": "7910d18f-f9ad-4a54-9639-d95662efa633"
+    },
+    {
+        "uuid": "d49dc880-1855-4bfc-9591-d6334a8312a4",
+        "name": "Vales digitales",
+        "description": "Vales digitales",
+        "uuidConcept": "7910d18f-f9ad-4a54-9639-d95662efa633"
+    },
+    {
+        "uuid": "f62f6ced-7ba6-4853-8e09-bcfdb393fa70",
+        "name": "Belleza y cuidado personal",
+        "description": "Belleza y cuidado personal",
+        "uuidConcept": "95c3d49b-e454-495a-9d28-50405073d7e6"
+    },
+    {
+        "uuid": "722ba8c6-f6db-48e7-8d6f-43e9c219760f",
+        "name": "Deporte y Outdoor",
+        "description": "Deporte y Outdoor",
+        "uuidConcept": "95c3d49b-e454-495a-9d28-50405073d7e6"
+    },
+    {
+        "uuid": "57e5661a-aaf0-4292-a64a-f83a5566fe38",
+        "name": "Hogar",
+        "description": "Hogar",
+        "uuidConcept": "95c3d49b-e454-495a-9d28-50405073d7e6"
+    },
+    {
+        "uuid": "1845d529-e62f-475a-88e1-5924e93be745",
+        "name": "Moda",
+        "description": "Moda",
+        "uuidConcept": "95c3d49b-e454-495a-9d28-50405073d7e6"
+    },
+    {
+        "uuid": "a3a8178d-9711-4b41-baec-afae914c5a4b",
+        "name": "Electrohogar",
+        "description": "Electrohogar",
+        "uuidConcept": "95c3d49b-e454-495a-9d28-50405073d7e6"
+    }
+]

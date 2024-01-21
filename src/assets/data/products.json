@@ -1,0 +1,72 @@
+[
+    {
+        "uuid": "99d88cb3-07c3-474d-af9a-21ac9d023f07",
+        "name": "Plancha para cabello",
+        "description": "Plancha para cabello xwide dig 3d titanio 220v",
+        "brand": "Gama",
+        "model": "xwide dig",
+        "price": 125.00,
+        "extraInfo": "Tecnología: Iones /// Cable giratorio: Sí /// Longitud del cable: 300",
+        "url": "https://www.inche.com.pe/wp-content/uploads/2021/04/BECHS0000001479.png",
+        "urlSecond": "https://www.inche.com.pe/wp-content/uploads/2021/04/BECHS0000001479_2.png",
+        "urlThird": "https://gamaperu.vtexassets.com/arquivos/ids/155574-1600-auto?v=638191654150630000&width=1600&height=auto&aspect=true",
+        "urlQuarter": "https://falabella.scene7.com/is/image/FalabellaPE/18040652_2?wid=800&hei=800&qlt=70",
+        "uuidSubCategory": "9b5d3a7e-b6be-4a4d-bf7b-da890a687662"
+    },
+    {
+        "uuid": "02620187-5fe0-4bff-920b-40bd8129e610",
+        "name": "Bolso de dormir",
+        "description": "Bolso de dormir estilo mummy azul sm300 az outback",
+        "brand": "Outback",
+        "model": "Estilo Mummy Azul",
+        "price": 679.00,
+        "extraInfo": "Marca: Outback. ///  Medidas: 230 x (55-80) x 2 cm. /// Peso: 1.3 kg.",
+        "url": "https://static.interbankbenefit.pe/public/web/images/producto/ficha-tecnica/486406-ficha-tecnica.png",
+        "urlSecond": "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_008870/tienda_008870_277b442227cfb3838cf53c03520db579eb9fc798_producto_medium_85.jpg",
+        "urlThird": "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_008870/tienda_008870_defaf33b9f7a1338622c78bb13f756a3b6417971_producto_medium_85.jpg",
+        "urlQuarter": "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_008870/tienda_008870_277b442227cfb3838cf53c03520db579eb9fc798_producto_medium_85.jpg",
+        "uuidSubCategory": "9e1454b8-54f6-44fc-a4f2-13acc9472e6a"
+    },
+    {
+        "uuid": "e3a34277-5815-42f6-b81a-13e5d7e947ae",
+        "name": "Toalla de cuerpo",
+        "description": "Toalla de cuerpo 0.70 x 1.40cm gris 550gr koba",
+        "brand": "Koba",
+        "model": "cuerpo",
+        "price": 60.00,
+        "extraInfo": "Toalla 100 algodón de 550gr . hecho en perú /// Absorvente . lavar antes de usar ///  No usar lejia. Lavar colores oscuros por separado. Secar en temperatura media",
+        "url": "https://static.interbankbenefit.pe/public/web/images/producto/ficha-tecnica/452583-ficha-tecnica.png",
+        "urlSecond": "https://falabella.scene7.com/is/image/FalabellaPE/19693185_1?wid=800&hei=800&qlt=70",
+        "urlThird": "https://falabella.scene7.com/is/image/FalabellaPE/19693184_1?wid=800&hei=800&qlt=70",
+        "urlQuarter": "https://falabella.scene7.com/is/image/FalabellaPE/19693188_1?wid=800&hei=800&qlt=70",
+        "uuidSubCategory": "e371ff1d-d1fc-40c5-82af-da2debc84f6d"
+    },
+    {
+        "uuid": "da038123-0af6-4f22-8b92-6beb1c1f4560",
+        "name": "Polo Pijama",
+        "description": "Polo Pijama Manga Corta Mujer University Club",
+        "brand": "University Club",
+        "model": "ATUCOTTONV24C",
+        "price": 55.00,
+        "extraInfo": "Condicion del producto: Nuevo  ///  Marca: University Club ///  Modelo: ATUCOTTONV24C /// Composición: 100% Bamboo",
+        "url": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_126577041_4609715_1?wid=800&hei=800&qlt=70",
+        "urlSecond": "https://falabella.scene7.com/is/image/FalabellaPE/882882413_1?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70",
+        "urlThird": "https://falabella.scene7.com/is/image/FalabellaPE/882882413_2?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70",
+        "urlQuarter": "https://falabella.scene7.com/is/image/FalabellaPE/882882413_4?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70",
+        "uuidSubCategory": "e49b85da-2a4d-4658-a4e6-3094dab65a94"
+    },
+    {
+        "uuid": "8a9aa5cd-b075-4bb9-a0e5-8c722be29d8a",
+        "name": "Plancha",
+        "description": "Plancha tanque esi10 1250w lila electrolux",
+        "brand": "Electrolux",
+        "model": "ESI10",
+        "price": 230.00,
+        "extraInfo": "Capacidad del estanque: 200 ml /// Cable giratorio: No",
+        "url": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115225155_1044025_1?wid=800&hei=800&qlt=70",
+        "urlSecond": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115225155_1044025_2?wid=800&hei=800&qlt=70",
+        "urlThird": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115225155_1044025_3?wid=800&hei=800&qlt=70",
+        "urlQuarter": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115225155_1044025_5?wid=800&hei=800&qlt=70",
+        "uuidSubCategory": "27944ae8-af14-41ae-a138-1a4691ba26ea"
+    }
+]

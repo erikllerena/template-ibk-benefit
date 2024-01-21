@@ -1,0 +1,119 @@
+@import 'src/variables'
+
+.navbar-toggler
+    border: none
+    font-size: 12px
+    &:focus
+        border: none
+        outline: 0
+        box-shadow: none
+
+.tib-navtop
+    display: flex
+    width: 100%
+    & a img
+        width: 100%
+        max-width: 200px
+
+
+.tib-search-container 
+    border-radius: 5px
+    overflow: hidden
+    width: 100%
+    position: relative
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    & .header 
+        display: flex
+        background-color: #fff
+        padding: 0px 20px
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+        position: relative
+        align-items: center
+        border-radius: 5px
+        border: 2px solid $color-primary
+        & svg 
+            padding: 10px 0 10px 10px
+            color: $color-primary
+        & input 
+            border: 0
+            background-color: white
+            border-radius: 10px
+            padding: 5px 0px
+            width: 100%
+            font-size: 12px
+        & button:hover 
+            transform: translateY(-2px)
+        & button:active 
+            transform: translateY(2px)
+        & input:focus 
+            outline: none
+
+.tib-cart-container
+    position: relative
+    padding: 5px
+    margin-bottom: 15px
+    font-size: 24px
+    text-align: right
+    color: #777
+    & .badge 
+        padding: 3px 7px
+        position: absolute
+        right: 0px
+        top: 0
+        display: inline-block
+        background-color: #F44336
+        border-radius: 50px
+        font-size: 11px
+        font-weight: 700
+        color: white	
+        &:before 
+            content: ''
+            position: absolute
+            top: -2px
+            left: -2px
+            width: 100%
+            height: 100%
+            border: dotted #F44336 2px
+            border-radius: 20px
+            opacity: 0
+        & span
+            color: white
+
+
+.user-list 
+    background-color: #fff
+    list-style-type: none
+    margin: 0
+    height: 400px
+    overflow-y: auto
+    padding: 0
+    & li 
+        display: flex
+        align-items: center
+        padding: 20px
+    & img
+        border-radius: 50%
+        object-fit: cover
+        height: 50px
+        width: 50px
+    & .user-info 
+        margin-left: 15px
+    & .user-info h4 
+        margin: 0
+    & .user-info p 
+        font-size: 12px
+        margin: 0
+    & li:not(:last-of-type) 
+        border-bottom: 1px solid #eee
+    & li.hide 
+        display: none
+
+@media screen and (width >= 768px) 
+    .tib-navtop .toggler-col
+        display: none
+
+@media screen and (width < 768px) 
+    .tib-navtop .search-col
+        width: 100%   
+
+  
